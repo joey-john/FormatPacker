@@ -1,0 +1,85 @@
+# Benchmark Tracker
+# Tracking Format Packer Benchmark Times to see if I am improving it
+
+# Defaults: 
+{
+    'interleave_search': False,
+    'linearization_level': 1,
+    'max_time_in_seconds': 30,
+    'num_workers': 1,
+    'random_seed': 42,
+    'search_branching': 'AUTOMATIC_SEARCH'
+}
+
+-----------------------------------------------------------------------------------------------------------
+Date     | Version | Test            | Time (s)            | Configurations 
+-----------------------------------------------------------------------------------------------------------
+===== Number of Workers =====
+05/21/25 | 0.1.1   | LargeInput[:500]  | 33.855379000015090  | {'interleave_search': False, 'linearization_level': 1 , 'max_time_in_seconds': 30, 'num_workers': 1 , 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH'}
+05/21/25 | 0.1.1   | LargeInput[:500]  | 38.161640700011050  | {'interleave_search': False, 'linearization_level': 1 , 'max_time_in_seconds': 30, 'num_workers': 8 , 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH'}
+05/21/25 | 0.1.1   | LargeInput[:500]  | 43.818362799996976  | {'interleave_search': False, 'linearization_level': 1 , 'max_time_in_seconds': 30, 'num_workers': 16, 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH'}
+05/21/25 | 0.1.1   | LargeInput[:500]  | 240.18070760002593  | {'interleave_search': False, 'linearization_level': 1 , 'max_time_in_seconds': 30, 'num_workers': 28, 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH'}
+===== Interleave Search =====
+05/21/25 | 0.1.1   | LargeInput[:500]  | 30.931390999990980  | {'interleave_search': True , linearization_level': 1 , 'max_time_in_seconds': 30, 'num_workers': 1 , 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH'}
+05/21/25 | 0.1.1   | LargeInput[:500]  | 31.012561100011226  | {'interleave_search': True , linearization_level': 1 , 'max_time_in_seconds': 30, 'num_workers': 1 , 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH'}
+===== Number of Workers + Interleave Search=True =====
+05/21/25 | 0.1.1   | LargeInput[:500]  | 237.54132700001355 | {'interleave_search': False, 'linearization_level': 1 , 'max_time_in_seconds': 30, 'num_workers': 0 , 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH',}
+05/21/25 | 0.1.1   | LargeInput[:500]  | 33.85438440000871  | {'interleave_search': False, 'linearization_level': 1 , 'max_time_in_seconds': 30, 'num_workers': 1 , 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH',}
+05/21/25 | 0.1.1   | LargeInput[:500]  | 41.38313939998625  | {'interleave_search': False, 'linearization_level': 1 , 'max_time_in_seconds': 30, 'num_workers': 8 , 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH',}
+05/21/25 | 0.1.1   | LargeInput[:500]  | 48.93493480002508  | {'interleave_search': False, 'linearization_level': 1 , 'max_time_in_seconds': 30, 'num_workers': 16, 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH',}
+05/21/25 | 0.1.1   | LargeInput[:500]  | None               | {'interleave_search': True , 'linearization_level': 1 , 'max_time_in_seconds': 30, 'num_workers': 0 , 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH',}
+05/21/25 | 0.1.1   | LargeInput[:500]  | 31.11330099997576  | {'interleave_search': True , 'linearization_level': 1 , 'max_time_in_seconds': 30, 'num_workers': 1 , 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH',}
+05/21/25 | 0.1.1   | LargeInput[:500]  | 63.28527079999913  | {'interleave_search': True , 'linearization_level': 1 , 'max_time_in_seconds': 30, 'num_workers': 8 , 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH',}
+05/21/25 | 0.1.1   | LargeInput[:500]  | 174.60159739997471 | {'interleave_search': True , 'linearization_level': 1 , 'max_time_in_seconds': 30, 'num_workers': 16, 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH',}
+
+==== Testing Log =====
+05/21/25 | 0.1.1   | LargeInput[:500]  | None              | {'interleave_search': True , 'linearization_level': 1 , 'max_time_in_seconds': 30, 'num_workers': 1 , 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH',}
+
+===== Linearization Level =====
+05/21/25 | 0.1.1   | LargeInput[:500]  | 30.93635600002017 | {'interleave_search': True , 'linearization_level': 0 , 'max_time_in_seconds': 30, 'num_workers': 1 , 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH',}
+05/21/25 | 0.1.1   | LargeInput[:500]  | None              | {'interleave_search': True , 'linearization_level': 0 , 'max_time_in_seconds': 30, 'num_workers': 1 , 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH',}
+05/21/25 | 0.1.1   | LargeInput[:500]  | 51.58541210001567 | {'interleave_search': False, 'linearization_level': 1 , 'max_time_in_seconds': 30, 'num_workers': 1 , 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH',}
+05/21/25 | 0.1.1   | LargeInput[:500]  | None              | {'interleave_search': True , 'linearization_level': 1 , 'max_time_in_seconds': 30, 'num_workers': 1 , 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH',}
+05/21/25 | 0.1.1   | LargeInput[:500]  | 30.44816189998528 | {'interleave_search': True , 'linearization_level': 1 , 'max_time_in_seconds': 30, 'num_workers': 1 , 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH',}
+05/22/25 | 0.1.1   | LargeInput[:500]  | 31.38895170000615 | {'interleave_search': True , 'linearization_level': 1 , 'max_time_in_seconds': 30, 'num_workers': 1 , 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH',}
+05/22/25 | 0.1.1   | LargeInput[:500]  | 6.98265140003059 | {'interleave_search': True , 'linearization_level': 1 , 'max_time_in_seconds': 30, 'num_workers': 1 , 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH',}
+05/22/25 | 0.1.1   | LargeInput[:500]  | None              | {'interleave_search': True , 'linearization_level': 1 , 'max_time_in_seconds': 30, 'num_workers': 1 , 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH',}
+05/22/25 | 0.1.1   | LargeInput[:500]  | None              | {'interleave_search': False, 'linearization_level': 1 , 'max_time_in_seconds': 30, 'num_workers': 0 , 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH',}
+05/22/25 | 0.1.1   | LargeInput[:500]  | 853.71305760001997 | {'interleave_search': True , 'linearization_level': 1 , 'max_time_in_seconds': 30, 'num_workers': 1 , 'random_seed': 42, 'search_branching': 'AUTOMATIC_SEARCH',}
+
+
+================================================================================
+Heuristic Algorithm                            
+================================================================================
+05/23/25 | 0.1.1   | LargeInput[:500]  | None              |
+05/23/25 | 0.1.1   | LargeInput[:500]  | None              |
+05/23/25 | 0.1.1   | LargeInput[:500]  | None              |
+05/23/25 | 0.1.1   | LargeInput[:500]  | None              |
+05/23/25 | 0.1.1   | LargeInput[:500]  | None              |
+05/23/25 | 0.1.1   | LargeInput[:500]  | None              |
+05/23/25 | 0.1.1   | LargeInput[:500]  | None              |
+05/23/25 | 0.1.1   | LargeInput[:500]  | 1.319543800025710 |
+05/23/25 | 0.1.1   | LargeInput[:500]  | None              |
+05/23/25 | 0.1.1   | LargeInput[:500]  | None              |
+
+
+================================================================================
+Best Fit Greedy Algorithm                          
+================================================================================
+─────────┬─────────┬──────────────────────┬──────────────────────
+Date     │ Version │ Test                 │ Time (s)          
+─────────┼─────────┼──────────────────────┼──────────────────────
+05/24/25 | 0.1.3   | LargeInput           │ 0.015540299995337
+─────────┼─────────┼──────────────────────┼──────────────────────
+05/24/25 | 0.1.3   | LargeInput           | 0.016283599979943
+─────────┼─────────┼──────────────────────┼──────────────────────
+05/24/25 | 0.1.3   | LargeInput           | 0.015979899995727
+─────────┼─────────┼──────────────────────┼──────────────────────
+05/24/25 | 0.1.3   | LargeInput           | 0.015936100011459
+─────────┼─────────┼──────────────────────┼──────────────────────
+05/24/25 | 0.1.3   | LargeInput           | 0.015626300009899
+─────────┼─────────┼──────────────────────┼──────────────────────
+05/25/25 | 0.1.3   | LargeInput[:100]     | 0.710727199999383
+─────────┼─────────┼──────────────────────┼──────────────────────
+05/25/25 | 0.1.3   | LargeInput[:100]     | 0.690205099999730
+─────────┼─────────┼──────────────────────┼──────────────────────
