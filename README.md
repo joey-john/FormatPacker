@@ -1,4 +1,4 @@
-# Optimal Solution for Format Packing Problem using a CPSAT Solver README
+# Optimal Solution Format Packing using a CPSAT Solver
 Author: Joseph John
 
 This project utilizes Google's OR-Tools CPSAT Solver to Pack Objects into a Variable # of Formats with variable size for use in a Time-Division Multiplexing (TDM) Schedule.
