@@ -6,8 +6,8 @@ Packs and proves optimality for both the ideal frame and byte position per objec
 
 **NOTE:** This project was abandoned due to the time constraints for packing large number of objects. The solve was hitting the NP-hardnesss of it all and I thought a different approach would be necessary. But it's still cool to see this work.  
 Even after doing extensive benchmarking and finetuning parameters, The solve time for ~2000 objects was about 30 seconds. If you see a good way I can reduce that to under 5 seconds by modifying constraints I'd be happy to look into it!
----
 
+---
 
 ## Files:
 
@@ -66,10 +66,10 @@ Currently, [*main.py*](main.py) provides 2 functions that can be used for runnin
 ### FormatPacker Arguments
 #### Inputs:
 ``` py
-    objects (list[PointObject|GroupObjectList])         : List of Point Objects to Pack
-    frame_size (int)                    : Frame Size (bytes)
-    num_frames (int, optional)          : Number of Frames. Defaults to 32.
-    output_path (Path | str, optional)  : Path and name for exported excel file. Defaults to "packer_out.xlsx".
+    objects (list[PointObject|GroupObjectList])     : List of Point Objects to Pack
+    frame_size (int)                                : Frame Size (bytes)
+    num_frames (int, optional)                      : Number of Frames. Defaults to 32.
+    output_path (Path | str, optional)              : Path and name for exported excel file. Defaults to "packer_out.xlsx".
 ```
 
 #### Outputs:
